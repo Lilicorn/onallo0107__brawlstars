@@ -198,7 +198,9 @@ namespace onallo0107__brawlstars
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            if (droppolt.SelectedIndex == -1 || ezerkupas.SelectedIndex == -1 || string.IsNullOrWhiteSpace(dropping.Text))
+            if ( ((string)Remove.Content != "torolnem" && droppolt.SelectedIndex == -1 )
+                || ((string)Remove.Content == "torolnem" && ezerkupas.SelectedIndex == -1)
+                || string.IsNullOrWhiteSpace(dropping.Text))
             {MessageBox.Show("nincs kit kitorolnom", "hiba", MessageBoxButton.OK); return; }
 
 
@@ -222,8 +224,21 @@ namespace onallo0107__brawlstars
             }
             else
             {
-                return; // tba :(
-                // szia mukocc ugye?
+                ezerkupasbrawler.Add(dropping.Text);
+                droppoltbrawler.Remove(dropping.Text);
+
+                string txtbe = "";
+                foreach (var b in droppoltbrawler)
+                {
+                    txtbe += (b + ";");
+                }
+                File.WriteAllText("droppoltbrawler.txt", txtbe);
+                txtbe = "";
+                foreach (var n in ezerkupasbrawler)
+                {
+                    txtbe += (n + ";");
+                }
+                File.WriteAllText("ezerkupasbrawler.txt", txtbe);
             }
 
                 feltoltes();
