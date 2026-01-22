@@ -94,5 +94,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bg_valentines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="emoji_shade_brawlentine_special.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Untitled18_20260121124235.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="emoji_jessie_mecha_special_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="colette_maid_pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="connector_2_to_3_bright_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="VERTICA.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

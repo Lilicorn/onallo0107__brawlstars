@@ -28,7 +28,7 @@ namespace onallo0107__brawlstars
         {
             InitializeComponent();
 
-            warning.Content = "warning: ne kattingass olyan gyorsan, \nvalamiert lassu a wpf";
+            warning.Content = "warning: ne kattingass olyan \ngyorsan, valamiért lassú a wpf";
 
             feltoltes();
             
@@ -87,6 +87,7 @@ namespace onallo0107__brawlstars
             hianyzo.Items.Clear();
             ezerkupas.Items.Clear();
             droppolt.Items.Clear();
+
 
             foreach (var b in nemezerkupas)
             {
@@ -147,7 +148,7 @@ namespace onallo0107__brawlstars
         private void ezerkupas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Dropped.IsEnabled = true;
-            Remove.Content = "torolnem";
+            Remove.Content = "törölném";
             dropping.Text = (string)ezerkupas.SelectedItem;
 
         }
@@ -198,13 +199,13 @@ namespace onallo0107__brawlstars
 
         private void Remove_Click(object sender, RoutedEventArgs e)
         {
-            if ( ((string)Remove.Content != "torolnem" && droppolt.SelectedIndex == -1 )
-                || ((string)Remove.Content == "torolnem" && ezerkupas.SelectedIndex == -1)
+            if ( ((string)Remove.Content != "törölném" && droppolt.SelectedIndex == -1 )
+                || ((string)Remove.Content == "törölném" && ezerkupas.SelectedIndex == -1)
                 || string.IsNullOrWhiteSpace(dropping.Text))
             {MessageBox.Show("nincs kit kitorolnom", "hiba", MessageBoxButton.OK); return; }
 
 
-            if ((string)Remove.Content == "torolnem")
+            if ((string)Remove.Content == "törölném")
             {
                 nemezerkupas.Add(dropping.Text);
                 ezerkupasbrawler.Remove(dropping.Text);
@@ -244,6 +245,11 @@ namespace onallo0107__brawlstars
                 feltoltes();
         }
 
-        
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            overlayxd.Width = this.ActualWidth;
+            overlayxd.Height = this.ActualHeight;
+
+        }
     }
 }

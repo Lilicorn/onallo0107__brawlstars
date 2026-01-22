@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:onallo0107__brawlstars"
         mc:Ignorable="d"
-        Title="𝚋𝚛𝚊𝚠𝚕 𝚜𝚝𝚊𝚛𝚜 𝚕𝚘𝚐𝚜 ⋆｡°✩" Height="475" Width="810" MinHeight="475" MinWidth="810" FontSize="16" FontFamily="Courier New">
+        Title="𝚋𝚛𝚊𝚠𝚕 𝚜𝚝𝚊𝚛𝚜 𝚕𝚘𝚐𝚜 ⋆｡°✩" Height="475" Width="810" MinHeight="475" MinWidth="810" FontSize="16" FontFamily="Courier New" SizeChanged="Window_SizeChanged"  Foreground="Black">
+    <Window.Background>
+        <ImageBrush Stretch="Fill" ImageSource="/bg_valentines.png"/>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
@@ -13,47 +16,82 @@
             <RowDefinition Height="6*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="2">
+        <Grid Panel.ZIndex="2" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="6*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+
+
+            <Image Grid.Row="0" Grid.Column="0" Source="/connector_2_to_3_bright_new.png"></Image>
+            <Image Grid.Row="0" Grid.Column="1" Source="/connector_2_to_3_bright_new.png"></Image>
+            <Image Grid.Row="0" Grid.Column="2" Source="/connector_2_to_3_bright_new.png"></Image>
+
+            <ListBox Panel.ZIndex="2" Margin="5" x:Name="hianyzo" Grid.Row="1" Grid.Column="0" SelectionChanged="hianyzo_SelectionChanged" BorderBrush="#FFFF00DE"/>
+            <ListBox Panel.ZIndex="2" Margin="5" x:Name="ezerkupas" Grid.Row="1" Grid.Column="1" SelectionChanged="ezerkupas_SelectionChanged" BorderBrush="#FFFF00DE"/>
+            <ListBox Panel.ZIndex="2" Margin="5" x:Name="droppolt" Grid.Row="1" Grid.Column="2" SelectionChanged="droppolt_SelectionChanged" BorderBrush="#FFFF00DE"/>
             
-            <ListBox  Margin="5" x:Name="hianyzo" Grid.Column="0" SelectionChanged="hianyzo_SelectionChanged"/>
-            <ListBox Margin="5" x:Name="ezerkupas" Grid.Column="1" SelectionChanged="ezerkupas_SelectionChanged"/>
-            <ListBox  Margin="5" x:Name="droppolt" Grid.Column="2" SelectionChanged="droppolt_SelectionChanged"/>
+            <Image Grid.Row="2" Grid.Column="0" Source="/connector_2_to_3_bright_new.png"></Image>
+            <Image Grid.Row="2" Grid.Column="1" Source="/connector_2_to_3_bright_new.png"></Image>
+            <Image Grid.Row="3" Grid.Column="2" Source="/connector_2_to_3_bright_new.png"></Image>
+
         </Grid>
 
 
 
-        <Label Grid.Row="0" FontSize="30" Content="⋆ kiket pusholtam eddig 1000 kupára ⋆" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+        <Label Panel.ZIndex="2" Grid.Row="0" FontSize="30" Content="⋆ kiket pusholtam eddig 1000 kupára ⋆" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
 
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Row="1">
-            
-            <StackPanel  Orientation="Horizontal">
-                <Label  Margin="5" Content="már 1000 kupán van:"></Label>
-                <TextBox MinWidth="200" Margin="5" x:Name="ujhozzaadas" />
-                <Button x:Name="Save" Margin="5" Content="mentés" Padding="5" Click="Save_Click"/>
+        <StackPanel Panel.ZIndex="2" Orientation="Vertical" VerticalAlignment="Center" Grid.Row="1">
+
+            <StackPanel Panel.ZIndex="2" Orientation="Horizontal">
+                <Image Margin="10 0" Height="40" Width="40" Source="/emoji_shade_brawlentine_special.png"/>
+                <Label  Margin="5" Content="1000 kupán van:"></Label>
+                <TextBox Height="30" MinWidth="200" Margin="5" x:Name="ujhozzaadas" />
+                <Button x:Name="Save" Margin="5" Content="mentés" Padding="5" Click="Save_Click" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Untitled18_20260121124235.PNG"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
-            
-            <StackPanel  Orientation="Horizontal">
+
+            <StackPanel Panel.ZIndex="2"  Orientation="Horizontal">
+                <Image Margin="10 0" Height="40" Width="40" Source="/emoji_jessie_mecha_special_pink.png">
+                </Image>
                 <Label  Margin="5" Content="droppolt karakter:"></Label>
-                <TextBox MinWidth="200" Margin="5" x:Name="dropping" />
-                <Button x:Name="Dropped" Margin="5" Content="droppoltam" Padding="5" Click="Dropped_Click"/>
-                <Button x:Name="Remove" Margin="5" Content="torolnem" Padding="5" Click="Remove_Click"/>
+                <TextBox Height="30" MinWidth="200" Margin="5" x:Name="dropping" />
+                <Button x:Name="Dropped" Margin="5" Content="droppoltam" Padding="5" Click="Dropped_Click" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Untitled18_20260121124235.PNG"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="Remove" Margin="5" Content="törölném" Padding="5" Click="Remove_Click" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Untitled18_20260121124235.PNG"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
-            
-            <StackPanel  Orientation="Horizontal">
+
+            <StackPanel Panel.ZIndex="2" Orientation="Horizontal">
+                <Image Margin="10 0" Height="40" Width="40" Source="/colette_maid_pin.png"/>
                 <Label  Margin="5" Content="új karakter:"></Label>
-                <TextBox MinWidth="200" Margin="5" x:Name="osszesupdate" />
-                <Button x:Name="Update" Margin="5" Content="mentés" Padding="5" Click="Update_Click"/>
+                <TextBox Height="30" MinWidth="200" Margin="5" x:Name="osszesupdate" />
+                <Button x:Name="Update" Margin="5" Content="mentés" Padding="5" Click="Update_Click" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Untitled18_20260121124235.PNG"/>
+                    </Button.Background>
+                </Button>
                 <Label x:Name="warning" Content=""></Label>
             </StackPanel>
-            
+
         </StackPanel>
 
-        <Grid Grid.Row="3">
+        <Grid Panel.ZIndex="2" Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
@@ -61,23 +99,24 @@
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" Orientation="Horizontal">
-                <Label Content="osszes brawler: "></Label>
-                <TextBox MinWidth="35" IsEnabled="False" Text="" x:Name="stat_osszesSzama"></TextBox>
+            <StackPanel Panel.ZIndex="2" Grid.Column="0" Orientation="Horizontal">
+                <Label Content="összes brawler: "></Label>
+                <TextBox HorizontalAlignment="Center" MinWidth="35" IsEnabled="False" Text="" x:Name="stat_osszesSzama" Background="{x:Null}"></TextBox>
             </StackPanel>
-            <StackPanel Grid.Column="1" Orientation="Horizontal">
+            <StackPanel Panel.ZIndex="2" Grid.Column="1" Orientation="Horizontal">
                 <Label Content="- 1000 kupás: "></Label>
-                <TextBox MinWidth="35" IsEnabled="False" Text="" x:Name="stat_ezerSzama"></TextBox>
+                <TextBox HorizontalAlignment="Center" MinWidth="35" IsEnabled="False" Text="" x:Name="stat_ezerSzama" Background="{x:Null}"></TextBox>
             </StackPanel>
-            <StackPanel Grid.Column="2" Orientation="Horizontal">
+            <StackPanel Panel.ZIndex="2" Grid.Column="2" Orientation="Horizontal">
                 <Label Content="- droppolt: "></Label>
-                <TextBox MinWidth="35" IsEnabled="False" Text="" x:Name="stat_droppoltSzama"></TextBox>
+                <TextBox HorizontalAlignment="Center" MinWidth="35" IsEnabled="False" Text="" x:Name="stat_droppoltSzama" Background="{x:Null}"></TextBox>
             </StackPanel>
-            <StackPanel Grid.Column="3" Orientation="Horizontal">
-                <Label Content="- 550 folotti: "></Label>
-                <TextBox MinWidth="35" IsEnabled="False" Text="" x:Name="stat_hatralevoSzama"></TextBox>
+            <StackPanel Panel.ZIndex="2" Grid.Column="3" Orientation="Horizontal">
+                <Label Content="- 550 fölötti: "></Label>
+                <TextBox HorizontalAlignment="Center" MinWidth="35" IsEnabled="False" Text="" x:Name="stat_hatralevoSzama" Background="{x:Null}"></TextBox>
             </StackPanel>
         </Grid>
+        <Rectangle x:Name="overlayxd"   Grid.RowSpan="4" Fill="#B2FFFFFF" Panel.ZIndex="1"/>
 
     </Grid>
 </Window>

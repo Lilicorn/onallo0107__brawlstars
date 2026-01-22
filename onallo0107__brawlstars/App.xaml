@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:onallo0107__brawlstars"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Thumb">
+            <Setter Property="Background" Value="#FFED4EE0"/>
+        </Style>
     </Application.Resources>
 </Application>
