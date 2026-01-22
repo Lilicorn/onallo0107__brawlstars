@@ -251,5 +251,6 @@ namespace onallo0107__brawlstars
             overlayxd.Height = this.ActualHeight;
 
         }
+
     }
 }
