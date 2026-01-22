@@ -223,6 +223,7 @@ namespace onallo0107__brawlstars
             else
             {
                 return; // tba :(
+                // szia mukocc ugye?
             }
 
                 feltoltes();
