@@ -222,7 +222,7 @@ namespace onallo0107__brawlstars
             }
             else
             {
-                return; // tba
+                return; // tba :(
             }
 
                 feltoltes();
