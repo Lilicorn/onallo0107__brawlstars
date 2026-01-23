@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:onallo0107__brawlstars"
         mc:Ignorable="d"
-        Title="𝚋𝚛𝚊𝚠𝚕 𝚜𝚝𝚊𝚛𝚜 𝚕𝚘𝚐𝚜 ⋆｡°✩" Height="475" Width="810" MinHeight="475" MinWidth="810" FontSize="16" FontFamily="Courier New" SizeChanged="Window_SizeChanged"  Foreground="Black" LostFocus="Window_LostFocus" GotFocus="Window_GotFocus">
+        Title="𝚋𝚛𝚊𝚠𝚕 𝚜𝚝𝚊𝚛𝚜 𝚕𝚘𝚐𝚜 ⋆｡°✩" Height="475" Width="810" MinHeight="475" MinWidth="810" FontSize="16" FontFamily="Courier New" SizeChanged="Window_SizeChanged"  Foreground="Black">
     <Window.Background>
         <ImageBrush Stretch="Fill" ImageSource="/bg_valentines.png"/>
     </Window.Background>
